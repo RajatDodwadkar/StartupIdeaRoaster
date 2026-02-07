@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Startup Idea Roaster</title>
+
+    <!-- Background image + base styles -->
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background:
+              linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+              url("bg.jpg") no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: #fff;
+        }
+    </style>
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="container">
+    <h1>Startup Idea Roaster</h1>
+    <p class="subtitle">
+        Before you fall in love with your idea, let AI try to kill it.
+    </p>
+
+    <label>Startup Idea *</label>
+    <textarea id="idea" placeholder="Describe your startup idea..."></textarea>
+
+    <label>Target Users (optional)</label>
+    <input id="users" placeholder="e.g. first-time founders" />
+
+    <label>Monetization (optional)</label>
+    <input id="money" placeholder="e.g. subscription" />
+
+    <label>Geography (optional)</label>
+    <input id="geo" placeholder="India / Global" />
+
+    <button id="submit">🔥 Roast my idea</button>
+
+    <div id="loading" class="hidden">Roasting…</div>
+
+    <!-- Markdown output container -->
+    <div id="output" class="markdown-output"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

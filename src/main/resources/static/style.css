@@ -1,0 +1,170 @@
+/* -------- GLOBAL -------- */
+body {
+  margin: 0;
+  padding: 40px;
+  font-family: system-ui, sans-serif;
+  color: #e5e5e5;
+
+  /* Animated background */
+  background-image: url("https://images.unsplash.com/photo-1526378722484-bd91ca387e72");
+  background-size: 120% 120%;
+  background-position: 0% 50%;
+  animation: bg-move 40s ease-in-out infinite;
+}
+
+/* Background animation */
+@keyframes bg-move {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Dark overlay for readability */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: -1;
+}
+
+/* -------- CONTAINER -------- */
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 32px;
+  background: rgba(15, 15, 15, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+}
+
+/* -------- HEADERS -------- */
+h1 {
+  font-size: 28px;
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  color: #aaa;
+  margin-bottom: 30px;
+}
+
+/* Markdown headings */
+#output h1 {
+  font-size: 22px;
+  margin-top: 24px;
+}
+
+#output h2 {
+  font-size: 20px;
+  margin-top: 22px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 6px;
+}
+
+#output h3 {
+  font-size: 18px;
+  margin-top: 20px;
+  color: #f43f5e;
+}
+
+/* -------- FORM -------- */
+label {
+  display: block;
+  margin-top: 16px;
+  font-weight: 600;
+}
+
+textarea,
+input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  background: #1b1b1b;
+  border: 1px solid #333;
+  color: #fff;
+  border-radius: 6px;
+}
+
+textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+/* -------- BUTTON -------- */
+button {
+  margin-top: 24px;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #e11d48, #be123c);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(225, 29, 72, 0.4);
+}
+
+/* -------- LOADING -------- */
+#loading {
+  margin-top: 20px;
+  color: #aaa;
+}
+
+.hidden {
+  display: none;
+}
+
+/* -------- MARKDOWN OUTPUT -------- */
+#output {
+  margin-top: 30px;
+  padding: 24px;
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 10px;
+  line-height: 1.6;
+}
+
+/* Paragraphs */
+#output p {
+  margin-bottom: 14px;
+}
+
+/* Lists */
+#output ul {
+  margin-left: 20px;
+  margin-bottom: 16px;
+}
+
+#output li {
+  margin-bottom: 6px;
+}
+
+/* Strong emphasis */
+#output strong {
+  color: #fca5a5;
+}
+
+/* Code blocks */
+#output pre {
+  background: #0b0b0b;
+  padding: 16px;
+  border-radius: 8px;
+  overflow-x: auto;
+  border: 1px solid #222;
+}
+
+#output code {
+  color: #86efac;
+  font-family: ui-monospace, monospace;
+}
+
+/* Metrics block vibe */
+#output em {
+  color: #93c5fd;
+}
